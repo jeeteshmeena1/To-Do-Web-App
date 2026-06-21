@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-list-check"></i>
+
+            <h2>To-Do</h2>
+            
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-list"></i>
+                Tasks
+            </li>
+
+            <li>
+                <i class="fa-solid fa-chart-pie"></i>
+                Statistics
+            </li>
+
+            <li id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+                Dark Mode
+            </li>
+
+            <li id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Header -->
+
+        <header>
+
+            <div>
+
+                <h1>
+                    Welcome,
+                    <span id="username">
+                        User
+                    </span>
+                    👋
+                </h1>
+
+                <p>
+                    Manage your daily tasks efficiently.
+                </p>
+
+            </div>
+
+        </header>
+
+        <!-- Statistics -->
+
+        <section class="stats">
+
+            <div class="card">
+
+                <i class="fa-solid fa-list"></i>
+
+                <h3>Total Tasks</h3>
+
+                <h2 id="totalTask">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h3>Completed</h3>
+
+                <h2 id="completedTask">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Pending</h3>
+
+                <h2 id="pendingTask">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-calendar-day"></i>
+
+                <h3>Today's Tasks</h3>
+
+                <h2 id="todayTask">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- Progress -->
+
+        <section class="progressCard">
+
+            <div class="progressTop">
+
+                <h2>Progress</h2>
+
+                <span id="progressPercent">
+
+                    0%
+
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progressBar"
+                    id="progressBar">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Add Task -->
+
+        <section class="addTask">
+
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Task Title"
+                    required>
+
+                <textarea
+                    id="description"
+                    placeholder="Description"></textarea>
+
+                <div class="row">
+
+                    <input
+                        type="date"
+                        id="date"
+                        required>
+
+                    <input
+                        type="time"
+                        id="time"
+                        required>
+
+                </div>
+
+                <div class="row">
+
+                    <select id="priority">
+
+                        <option>Low</option>
+
+                        <option>Medium</option>
+
+                        <option>High</option>
+
+                    </select>
+
+                    <select id="category">
+
+                        <option>Study</option>
+
+                        <option>Personal</option>
+
+                        <option>Office</option>
+
+                        <option>Shopping</option>
+
+                        <option>Others</option>
+
+                    </select>
+
+                </div>
+
+                <button>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Task
+
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Search -->
+
+        <section class="search">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search Task...">
+
+        </section>
+
+        <!-- Task List -->
+
+        <section>
+
+            <h2>
+
+                Your Tasks
+
+            </h2>
+
+            <div
+                id="taskList"
+                class="taskList">
+
+                <!-- Tasks will appear here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
